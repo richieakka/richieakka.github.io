@@ -8,12 +8,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg: #EEECE4;
-    --ink: #1E1D1A;
-    --ink-soft: #605C52;
-    --accent: #2B5B4F;
-    --line: #C9C4B6;
-    --card: #F7F5EF;
+    --bg: #E4E9E7;
+    --ink: #1C2624;
+    --ink-soft: #56635F;
+    --accent: #7A3B4A;
+    --line: #C3CDC9;
+    --card: #EEF2F0;
   }
   *{box-sizing:border-box;}
   body{
@@ -105,18 +105,30 @@
   .entry h3{margin:0 0 6px;font-size:17px;font-weight:600;}
   .entry p{margin:0;color:var(--ink-soft);font-size:15px;}
 
-  .pub-list{display:flex;flex-direction:column;}
+  .pub-subhead{
+    font-family:'Inter',sans-serif;
+    font-size:13px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:.1em;
+    color:var(--accent);
+    margin:0 0 18px;
+    padding-top:12px;
+  }
+  .pub-subhead:first-of-type{padding-top:0;}
+  .pub-count{color:var(--ink-soft);font-weight:500;text-transform:none;letter-spacing:0;}
+
+  .pub-list{display:flex;flex-direction:column;margin-bottom:44px;}
+  .pub-list:last-child{margin-bottom:0;}
   .pub{
-    padding:20px 0;
+    padding:18px 0;
     border-bottom:1px solid var(--line);
   }
   .pub:last-child{border-bottom:none;}
-  .pub .pub-type{
+  .pub .pub-year{
     font-size:12px;
-    color:var(--accent);
+    color:var(--ink-soft);
     font-weight:600;
-    text-transform:uppercase;
-    letter-spacing:.06em;
     margin-bottom:6px;
   }
   .pub h3{margin:0 0 4px;font-size:16px;font-weight:600;line-height:1.4;}
@@ -124,7 +136,7 @@
 
   .view-more{
     display:inline-block;
-    margin-top:24px;
+    margin-top:8px;
     font-size:14px;
     color:var(--accent);
     text-decoration:none;
@@ -176,7 +188,7 @@
 <body>
 <div class="wrap">
 
-  <div class="eyebrow">Researcher — Biometrics &amp; Security</div>
+  <div class="eyebrow">Researcher — Network Security &amp; Biometrics</div>
   <h1>Dr. Richa Gupta</h1>
   <p class="role">Post-Doctoral Researcher, IIIT-Delhi</p>
   <p class="lede">I research in security aspects related to blockchain and decentralized systems, biometric authentication systems. Also working in network security.</p>
@@ -225,42 +237,98 @@
 
   <section>
     <div class="section-head">
-      <h2>Selected publications</h2>
+      <h2>Publications</h2>
       <span>15 total</span>
     </div>
+
+    <h3 class="pub-subhead">Journal <span class="pub-count">(4)</span></h3>
     <div class="pub-list">
       <div class="pub">
-        <div class="pub-type">Conference · 2026</div>
-        <h3>Should Miners be Worried? Detecting Pool-Based Cryptocurrency Mining under Anonymity Preserving Tools</h3>
-        <p>21st International Conference on Availability, Reliability and Security (ARES), Linköping University, Sweden.</p>
+        <div class="pub-year">2023</div>
+        <h3>Study of Drug Assimilation in Human System Using Physics Informed Neural Networks</h3>
+        <p>Kanupriya Goswami, Arpana Sharma, Madhu Pruthi, Richa Gupta. International Journal of Information Technology, 15(1):315–324. ISSN 2511-2112. Indexed: SCOPUS.</p>
       </div>
       <div class="pub">
-        <div class="pub-type">Conference · 2024</div>
-        <h3>VoIP Vanguard: A Practical Front Line Defense against VoIP Identification Attacks in Tor</h3>
-        <p>International Conference on Network and System Security (NSS), Abu Dhabi, UAE.</p>
-      </div>
-      <div class="pub">
-        <div class="pub-type">Journal · 2023</div>
-        <h3>Study of Drug Assimilation in Human System using Physics Informed Neural Networks</h3>
-        <p>International Journal of Information Technology, 15(1):315–324. Indexed: SCOPUS.</p>
-      </div>
-      <div class="pub">
-        <div class="pub-type">Journal · 2020</div>
+        <div class="pub-year">2020</div>
         <h3>HsIrisNet: Histogram Based Iris Recognition to Allay Replay and Template Attack Using Deep Learning Perspective</h3>
-        <p>Pattern Recognition and Image Analysis, 30(4):786–794. Indexed: SCOPUS.</p>
+        <p>Richa Gupta, Priti Sehgal. Pattern Recognition and Image Analysis, 30(4):786–794. ISSN 1555-6212. IF 0.6 (2025). Indexed: SCOPUS.</p>
       </div>
       <div class="pub">
-        <div class="pub-type">Journal · 2019</div>
+        <div class="pub-year">2019</div>
         <h3>Non-Deterministic Approach to Allay Replay Attack on Iris Biometric</h3>
-        <p>Pattern Analysis and Applications, 22(2):717–729. IF 2.6. Indexed: SCOPUS.</p>
+        <p>Richa Gupta, Priti Sehgal. Pattern Analysis and Applications, 22(2):717–729. ISSN 1433-755X. IF 2.6 (2025). Indexed: SCOPUS.</p>
       </div>
       <div class="pub">
-        <div class="pub-type">Journal · 2016</div>
+        <div class="pub-year">2016</div>
         <h3>A Survey of Attacks on Iris Biometric Systems</h3>
-        <p>International Journal of Biometrics, 8(2):145–178. Indexed: SCOPUS.</p>
+        <p>Richa Gupta, Priti Sehgal. International Journal of Biometrics, 8(2):145–178. ISSN 1755-831X. IF 0.7 (2025). Indexed: SCOPUS.</p>
       </div>
     </div>
-    <a class="view-more" href="https://scholar.google.com/citations?hl=en&user=BfvFbvMAAAAJ">View full publication list on Google Scholar →</a>
+
+    <h3 class="pub-subhead">Conference (Peer-Reviewed) <span class="pub-count">(9)</span></h3>
+    <div class="pub-list">
+      <div class="pub">
+        <div class="pub-year">2026</div>
+        <h3>Should Miners Be Worried? Detecting Pool-Based Cryptocurrency Mining under Anonymity Preserving Tools</h3>
+        <p>Richa Gupta, Rachit Bhandari, S Jithin, Bhargav Jani, Vinayak Sharma, Sambuddho Chakravarty. 21st International Conference on Availability, Reliability and Security (ARES), Linköping University, Sweden.</p>
+      </div>
+      <div class="pub">
+        <div class="pub-year">2024</div>
+        <h3>VoIP Vanguard: A Practical Front Line Defense against VoIP Identification Attacks in Tor</h3>
+        <p>S Jithin, Richa Gupta, Reeshabh Kumar Ranjan, Shreyansh Nagpal, Mukulika Maity, Sambuddho Chakravarty. International Conference on Network and System Security (NSS), pages 319–346, Abu Dhabi, UAE. ISBN 978-981-96-3531-3.</p>
+      </div>
+      <div class="pub">
+        <div class="pub-year">2021</div>
+        <h3>Solving Differential Equations Using Neural Network</h3>
+        <p>Kanupriya Goswami, Arpana Sharma, Richa Gupta. 9th International Conference on Reliability, Infocom Technologies and Optimization (ICRITO), pages 1–5, Noida, India. ISBN 978-1-6654-1703-7.</p>
+      </div>
+      <div class="pub">
+        <div class="pub-year">2021</div>
+        <h3>Iris Recognition Using Selective Feature Set in Frequency Domain Using Deep Learning Perspective: FrDIrisNet</h3>
+        <p>Richa Gupta, Priti Sehgal. Cybernetics, Cognition and Machine Learning Applications: Proceedings of ICCCMLA 2020, pages 249–259, Goa, India. ISBN 978-981-33-6691-6.</p>
+      </div>
+      <div class="pub">
+        <div class="pub-year">2020</div>
+        <h3>Optimized Singular Value Decomposition (SVD) Based Watermarking of Iris Biometric Data to Mitigate Replay Attack</h3>
+        <p>Richa Gupta, Priti Sehgal. ICT for Competitive Strategies, pages 161–172, Udaipur, India. ISBN 978-100-30-5209-8.</p>
+      </div>
+      <div class="pub">
+        <div class="pub-year">2019</div>
+        <h3>A Complete End-to-End System for Iris Recognition to Mitigate Replay and Template Attack</h3>
+        <p>Richa Gupta, Priti Sehgal. Soft Computing and Signal Processing: Proceedings of ICSCSP, pages 571–582, Telangana, India. ISBN 978-981-13-3393-4.</p>
+      </div>
+      <div class="pub">
+        <div class="pub-year">2018</div>
+        <h3>A Non-Deterministic Approach to Mitigate Replay Attack and Database Attack Simultaneously on Iris Recognition System</h3>
+        <p>Richa Gupta, Priti Sehgal. International Conference on Intelligent Human Computer Interaction, pages 239–250, Allahabad, India. ISBN 978-303-00-4021-5.</p>
+      </div>
+      <div class="pub">
+        <div class="pub-year">2016</div>
+        <h3>Mitigating Iris Based Replay Attack Using Cuckoo Optimized Reversible Watermarking</h3>
+        <p>Richa Gupta, Priti Sehgal. International Conference on Advances in Computing, Control, and Telecommunication Technologies (ACT), Hyderabad, India. ISBN 978-818-48-7599-7.</p>
+      </div>
+      <div class="pub">
+        <div class="pub-year">2007</div>
+        <h3>Towards Self-Organizing Web Sites</h3>
+        <p>Punam Bedi, Saurabh Jain, Richa Gupta, Ravish Sharma, Archana Singhal. International Conference on Advanced Computing and Communications (ADCOM), pages 283–288, Guwahati, India. ISBN 0-7695-3059-1.</p>
+      </div>
+    </div>
+
+    <h3 class="pub-subhead">Book Chapter <span class="pub-count">(2)</span></h3>
+    <div class="pub-list">
+      <div class="pub">
+        <div class="pub-year">2020</div>
+        <h3>A Secure Iris Biometric Recognition System: Recent Trends and Solutions</h3>
+        <p>Richa Gupta, Priti Sehgal. Handbook of Research on Intelligent Data Processing and Information Security Systems, pages 95–115. IGI Global Scientific Publishing. ISBN 978-179-98-1290-6. Indexed: SCOPUS.</p>
+      </div>
+      <div class="pub">
+        <div class="pub-year">2022</div>
+        <h3>A Road Map to Artificial Neural Network</h3>
+        <p>Arpana Sharma, Kanupriya Goswami, Vinita Jindal, Richa Gupta. Recurrent Neural Networks, pages 3–21. CRC Press. ISBN 978-100-33-0782-2. Indexed: SCOPUS.</p>
+      </div>
+    </div>
+
+    <a class="view-more" href="https://scholar.google.com/citations?hl=en&user=BfvFbvMAAAAJ">View on Google Scholar →</a>
   </section>
 
   <section>
