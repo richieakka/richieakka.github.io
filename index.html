@@ -1,14 +1,306 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Richa Gupta</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Richa Gupta</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #EEECE4;
+    --ink: #1E1D1A;
+    --ink-soft: #605C52;
+    --accent: #2B5B4F;
+    --line: #C9C4B6;
+    --card: #F7F5EF;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    line-height:1.6;
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:96px 24px 120px;}
+
+  .eyebrow{
+    font-family:'Inter',sans-serif;
+    font-size:13px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--accent);
+    font-weight:600;
+    margin-bottom:20px;
+  }
+  h1{
+    font-family:'Fraunces',serif;
+    font-weight:500;
+    font-size:clamp(38px,6.5vw,58px);
+    line-height:1.05;
+    margin:0 0 10px;
+    letter-spacing:-0.01em;
+  }
+  .role{
+    font-size:17px;
+    color:var(--ink-soft);
+    margin:0 0 22px;
+  }
+  .lede{
+    font-size:18px;
+    color:var(--ink-soft);
+    max-width:58ch;
+    margin:0 0 36px;
+  }
+  .links{display:flex;gap:22px;flex-wrap:wrap;margin-bottom:88px;}
+  .links a{
+    color:var(--ink);
+    text-decoration:none;
+    font-size:14px;
+    font-weight:500;
+    border-bottom:1px solid var(--ink);
+    padding-bottom:2px;
+  }
+  .links a:hover{color:var(--accent);border-color:var(--accent);}
+
+  section{margin-bottom:72px;}
+  .section-head{
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    border-bottom:1px solid var(--line);
+    padding-bottom:14px;
+    margin-bottom:32px;
+  }
+  .section-head h2{
+    font-family:'Fraunces',serif;
+    font-weight:500;
+    font-size:26px;
+    margin:0;
+  }
+  .section-head span{
+    font-size:13px;
+    color:var(--ink-soft);
+  }
+
+  .tags{display:flex;flex-wrap:wrap;gap:10px;}
+  .tag{
+    background:var(--card);
+    border:1px solid var(--line);
+    padding:8px 14px;
+    font-size:13px;
+    color:var(--ink);
+  }
+
+  .entry{
+    display:grid;
+    grid-template-columns:160px 1fr;
+    gap:24px;
+    padding:22px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .entry:last-child{border-bottom:none;}
+  .entry time{font-size:13px;color:var(--ink-soft);padding-top:3px;}
+  .entry h3{margin:0 0 6px;font-size:17px;font-weight:600;}
+  .entry p{margin:0;color:var(--ink-soft);font-size:15px;}
+
+  .pub-list{display:flex;flex-direction:column;}
+  .pub{
+    padding:20px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .pub:last-child{border-bottom:none;}
+  .pub .pub-type{
+    font-size:12px;
+    color:var(--accent);
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:.06em;
+    margin-bottom:6px;
+  }
+  .pub h3{margin:0 0 4px;font-size:16px;font-weight:600;line-height:1.4;}
+  .pub p{margin:0;font-size:14px;color:var(--ink-soft);}
+
+  .view-more{
+    display:inline-block;
+    margin-top:24px;
+    font-size:14px;
+    color:var(--accent);
+    text-decoration:none;
+    font-weight:600;
+    border-bottom:1px solid var(--accent);
+    padding-bottom:2px;
+  }
+
+  .edu-grid{display:flex;flex-direction:column;}
+  .edu-item{
+    display:grid;
+    grid-template-columns:120px 1fr;
+    gap:24px;
+    padding:18px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .edu-item:last-child{border-bottom:none;}
+  .edu-item time{font-size:13px;color:var(--ink-soft);}
+  .edu-item h3{margin:0 0 4px;font-size:16px;font-weight:600;}
+  .edu-item p{margin:0;font-size:14px;color:var(--ink-soft);}
+
+  .award-list{list-style:none;padding:0;margin:0;}
+  .award-list li{
+    padding:14px 0;
+    border-bottom:1px solid var(--line);
+    font-size:15px;
+    color:var(--ink-soft);
+  }
+  .award-list li:last-child{border-bottom:none;}
+  .award-list li::before{content:"— ";color:var(--accent);font-weight:600;}
+
+  footer{
+    border-top:1px solid var(--line);
+    padding-top:28px;
+    font-size:13px;
+    color:var(--ink-soft);
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+  footer a{color:var(--ink-soft);}
+
+  @media (max-width:600px){
+    .entry, .edu-item{grid-template-columns:1fr;gap:6px;}
+  }
+</style>
 </head>
 <body>
+<div class="wrap">
 
-    <h1>Richa Gupta</h1>
-    <p>Post-Doc Researcher</p>
+  <div class="eyebrow">Researcher — Biometrics &amp; Security</div>
+  <h1>Dr. Richa Gupta</h1>
+  <p class="role">Post-Doctoral Researcher, IIIT-Delhi</p>
+  <p class="lede">I research biometric authentication systems, blockchain and decentralized systems, and network security — with a Ph.D. focused on securing iris biometric systems against replay and database attacks using deep learning approaches.</p>
+  <div class="links">
+    <a href="mailto:richie.akka@gmail.com">Email</a>
+    <a href="https://scholar.google.com/citations?hl=en&user=BfvFbvMAAAAJ">Google Scholar</a>
+    <a href="https://www.linkedin.com/in/richa-gupta-a8bb3322">LinkedIn</a>
+    <a href="https://github.com/richieakka">GitHub</a>
+  </div>
 
+  <section>
+    <div class="section-head">
+      <h2>Research interests</h2>
+    </div>
+    <div class="tags">
+      <div class="tag">Iris biometric authentication</div>
+      <div class="tag">Blockchain &amp; decentralized systems</div>
+      <div class="tag">Network security</div>
+      <div class="tag">Anonymous systems (Tor)</div>
+      <div class="tag">Deep learning</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <h2>Experience</h2>
+      <span>2007 — present</span>
+    </div>
+    <div class="entry">
+      <time>2022–present</time>
+      <div><h3>Post-Doctoral Researcher</h3><p>Indraprastha Institute of Information Technology, Delhi (IIIT-Delhi).</p></div>
+    </div>
+    <div class="entry">
+      <time>2015–2022</time>
+      <div><h3>Research Scholar</h3><p>Ph.D. in Computer Science, University of Delhi. Supported by the Chanakya DST Fellowship, Ministry of Science and Technology.</p></div>
+    </div>
+    <div class="entry">
+      <time>2012–2015</time>
+      <div><h3>Assistant Professor (Ad-hoc / Guest Faculty)</h3><p>Keshav Mahavidyalaya, Deen Dayal Upadhyaya College and Hansraj College, University of Delhi. Taught Operating Systems, Computer Networks and Computer Graphics.</p></div>
+    </div>
+    <div class="entry">
+      <time>2007–2011</time>
+      <div><h3>Software Engineer</h3><p>Aricent Technologies. 4.3 years across embedded systems and telecom protocol development.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <h2>Selected publications</h2>
+      <span>15 total</span>
+    </div>
+    <div class="pub-list">
+      <div class="pub">
+        <div class="pub-type">Conference · 2026</div>
+        <h3>Should Miners be Worried? Detecting Pool-Based Cryptocurrency Mining under Anonymity Preserving Tools</h3>
+        <p>21st International Conference on Availability, Reliability and Security (ARES), Linköping University, Sweden.</p>
+      </div>
+      <div class="pub">
+        <div class="pub-type">Conference · 2024</div>
+        <h3>VoIP Vanguard: A Practical Front Line Defense against VoIP Identification Attacks in Tor</h3>
+        <p>International Conference on Network and System Security (NSS), Abu Dhabi, UAE.</p>
+      </div>
+      <div class="pub">
+        <div class="pub-type">Journal · 2023</div>
+        <h3>Study of Drug Assimilation in Human System using Physics Informed Neural Networks</h3>
+        <p>International Journal of Information Technology, 15(1):315–324. Indexed: SCOPUS.</p>
+      </div>
+      <div class="pub">
+        <div class="pub-type">Journal · 2020</div>
+        <h3>HsIrisNet: Histogram Based Iris Recognition to Allay Replay and Template Attack Using Deep Learning Perspective</h3>
+        <p>Pattern Recognition and Image Analysis, 30(4):786–794. Indexed: SCOPUS.</p>
+      </div>
+      <div class="pub">
+        <div class="pub-type">Journal · 2019</div>
+        <h3>Non-Deterministic Approach to Allay Replay Attack on Iris Biometric</h3>
+        <p>Pattern Analysis and Applications, 22(2):717–729. IF 2.6. Indexed: SCOPUS.</p>
+      </div>
+      <div class="pub">
+        <div class="pub-type">Journal · 2016</div>
+        <h3>A Survey of Attacks on Iris Biometric Systems</h3>
+        <p>International Journal of Biometrics, 8(2):145–178. Indexed: SCOPUS.</p>
+      </div>
+    </div>
+    <a class="view-more" href="https://scholar.google.com/citations?hl=en&user=BfvFbvMAAAAJ">View full publication list on Google Scholar →</a>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <h2>Education</h2>
+    </div>
+    <div class="edu-grid">
+      <div class="edu-item">
+        <time>2015–2022</time>
+        <div><h3>Ph.D., Computer Science</h3><p>University of Delhi — "Securing Iris Biometric System against Replay and Database Attacks using Conventional and Deep Learning Approaches."</p></div>
+      </div>
+      <div class="edu-item">
+        <time>2005–2007</time>
+        <div><h3>M.Sc., Computer Science</h3><p>University of Delhi.</p></div>
+      </div>
+      <div class="edu-item">
+        <time>2002–2005</time>
+        <div><h3>B.Sc. (Hons.), Computer Science</h3><p>Deen Dayal Upadhyaya College, University of Delhi.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <h2>Honors &amp; professional activities</h2>
+    </div>
+    <ul class="award-list">
+      <li>Reviewer for the journal IET Biometrics</li>
+      <li>Reviewer for "New Methods and Tools for Intelligent Data Processing and Information Security Systems," IGI Global, 2019</li>
+      <li>Qualified UGC NET for Computer Science, December 2012</li>
+      <li>Team award for extraordinary technical acumen, Aricent, 2011</li>
+      <li>The Arun Kumar Award for Outstanding CSR, Aricent, 2008–09</li>
+    </ul>
+  </section>
+
+  <footer>
+    <span>Based in Delhi, India</span>
+    <span>Updated August 2026</span>
+  </footer>
+
+</div>
 </body>
 </html>
